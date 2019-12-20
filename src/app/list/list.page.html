@@ -4,19 +4,24 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      List
+      Master List
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
+    <ion-item *ngFor="let album of albums">
+      <ion-card>
+        <img height="180px" [src]="album.thumbnailUrl" />
+        <ion-card-header>
+          <ion-card-subtitle>ALBUM</ion-card-subtitle>
+          <ion-card-title>{{album.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dapibus nibh vel arcu accumsan egestas. In in ex augue.
+        </ion-card-content>
+      </ion-card>
     </ion-item>
   </ion-list>
   <!--
