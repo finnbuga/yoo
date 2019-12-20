@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
-import { IAlbum } from '../shared/interfaces';
-import { AlbumService } from '../api/album.service';
+import { IAlbum } from '../../shared/interfaces';
+import { AlbumService } from '../../api/album.service';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: 'list.page.html',
-  styleUrls: ['list.page.scss']
+  selector: 'album-list',
+  templateUrl: 'album-list.page.html'
 })
-export class ListPage implements OnInit {
+export class AlbumListPage implements OnInit {
   private selectedItem: any;
 
   //public items: Array<{ title: string; note: string; icon: string }> = [];
