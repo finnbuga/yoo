@@ -18,6 +18,6 @@ export class ListPage implements OnInit {
 
   ngOnInit() {
     this.albumService.getAlbums()
-      .subscribe((albums: IAlbum[]) => {this.albums = albums; console.log(albums);});
+      .subscribe((albums: IAlbum[]) => this.albums = albums);
   }
 }
