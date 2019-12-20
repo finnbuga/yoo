@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
+import { IAlbum } from '../shared/interfaces';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,10 +14,10 @@ export class AlbumService {
 
   constructor(private http: HttpClient) { }
 
-  getAlbums(): Observable<any> {
-    return this.http.get<any[]>(this.baseUrl + 'photos')
+  getAlbums(): Observable<IAlbum[]> {
+    return this.http.get<IAlbum[]>(this.baseUrl + 'photos')
       .pipe(
-        map(albums => albums.filter((album: any) => album.id < 10)),
+        map(albums => albums.filter((album: IAlbum) => album.id < 10)),
         catchError(this.handleError)
       )
   }
