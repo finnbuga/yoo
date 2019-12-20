@@ -24,8 +24,8 @@ export class AppComponent {
       isDisabled: true
     },
     {
-      title: 'Master List',
-      url: '/list',
+      title: 'Albums',
+      url: '/albums',
       icon: 'list',
       isDisabled: false
     },
