@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
 import { AlbumListPage } from './album-list/album-list.page';
+import { AlbumDetailsPage } from './album-details/album-details.page';
 
 @NgModule({
   imports: [
@@ -15,9 +16,13 @@ import { AlbumListPage } from './album-list/album-list.page';
       {
         path: '',
         component: AlbumListPage
+      },
+      {
+        path: ':id',
+        component: AlbumDetailsPage
       }
     ])
   ],
-  declarations: [AlbumListPage]
+  declarations: [AlbumListPage, AlbumDetailsPage]
 })
 export class AlbumModule {}
