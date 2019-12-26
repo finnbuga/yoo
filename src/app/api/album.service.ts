@@ -26,6 +26,13 @@ export class AlbumService {
       )
   }
 
+  getAlbum(id: number): Observable<IAlbum> {
+    return this.http.get<IAlbum>(this.baseUrl + 'photos/' + id)
+      .pipe(
+        catchError(this.handleError)
+      )
+  }
+
   private handleError(error: any) {
     console.error('server error:', error);
     if (error.error instanceof Error) {
