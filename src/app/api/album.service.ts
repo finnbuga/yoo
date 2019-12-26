@@ -17,7 +17,11 @@ export class AlbumService {
   getAlbums(): Observable<IAlbum[]> {
     return this.http.get<IAlbum[]>(this.baseUrl + 'photos')
       .pipe(
-        map(albums => albums.filter((album: IAlbum) => album.id < 10)),
+        map((albums: IAlbum[]) => 
+          albums
+            .filter((album: IAlbum) => album.id < 10)
+            .map((album: IAlbum) => ({...album, path: "/albums/" + album.id}))
+        ),
         catchError(this.handleError)
       )
   }
