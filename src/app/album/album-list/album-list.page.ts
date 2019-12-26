@@ -8,9 +8,6 @@ import { AlbumService } from '../../api/album.service';
   templateUrl: 'album-list.page.html'
 })
 export class AlbumListPage implements OnInit {
-  private selectedItem: any;
-
-  //public items: Array<{ title: string; note: string; icon: string }> = [];
   public albums: IAlbum[] = [];
 
   constructor(private albumService: AlbumService) {}
