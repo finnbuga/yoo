@@ -16,10 +16,15 @@
         <img height="180px" [src]="album.thumbnailUrl" />
         <ion-card-header>
           <ion-card-subtitle>ALBUM</ion-card-subtitle>
-          <ion-card-title><a [routerLink]="[album.path]" [routerDirection]="'forward'">{{album.title}}</a></ion-card-title>
+          <ion-card-title
+            ><a [routerLink]="[album.path]" [routerDirection]="'forward'"
+              >{{album.title}}</a
+            ></ion-card-title
+          >
         </ion-card-header>
         <ion-card-content>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dapibus nibh vel arcu accumsan egestas. In in ex augue.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          dapibus nibh vel arcu accumsan egestas. In in ex augue.
         </ion-card-content>
       </ion-card>
     </ion-item>

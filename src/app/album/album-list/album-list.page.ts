@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
-import { IAlbum } from '../../shared/interfaces';
-import { AlbumService } from '../../api/album.service';
+import { IAlbum } from "../../shared/interfaces";
+import { AlbumService } from "../../api/album.service";
 
 @Component({
-  selector: 'album-list',
-  templateUrl: 'album-list.page.html'
+  selector: "album-list",
+  templateUrl: "album-list.page.html"
 })
 export class AlbumListPage implements OnInit {
   public albums: IAlbum[] = [];
@@ -13,7 +13,8 @@ export class AlbumListPage implements OnInit {
   constructor(private albumService: AlbumService) {}
 
   ngOnInit() {
-    this.albumService.getAlbums()
-      .subscribe((albums: IAlbum[]) => this.albums = albums);
+    this.albumService
+      .getAlbums()
+      .subscribe((albums: IAlbum[]) => (this.albums = albums));
   }
 }

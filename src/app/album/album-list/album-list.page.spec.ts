@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { IonicModule } from "@ionic/angular";
 
-import { AlbumListPage as AlbumListPage } from './album-list.page';
+import { AlbumListPage } from "./album-list.page";
 
-describe('ListPage', () => {
+describe("ListPage", () => {
   let component: AlbumListPage;
   let fixture: ComponentFixture<AlbumListPage>;
   let listPage: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AlbumListPage ],
+      declarations: [AlbumListPage],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
@@ -19,14 +19,13 @@ describe('ListPage', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have a list of 10 elements', () => {
+  it("should have a list of 10 elements", () => {
     listPage = fixture.nativeElement;
-    const items = listPage.querySelectorAll('ion-item');
+    const items = listPage.querySelectorAll("ion-item");
     expect(items.length).toEqual(10);
   });
-
 });
