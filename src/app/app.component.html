@@ -9,10 +9,14 @@
       <ion-content>
         <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [disabled]="p.isDisabled" [routerLink]="[p.url]">
+            <ion-item
+              [routerDirection]="'root'"
+              [disabled]="p.isDisabled"
+              [routerLink]="[p.url]"
+            >
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
               <ion-label>
-                {{p.title}}
+                {{ p.title }}
               </ion-label>
             </ion-item>
           </ion-menu-toggle>

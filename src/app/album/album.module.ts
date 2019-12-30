@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
-import { RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
+import { IonicModule } from "@ionic/angular";
+import { RouterModule } from "@angular/router";
 
-import { AlbumListPage } from './album-list/album-list.page';
-import { AlbumDetailsPage } from './album-details/album-details.page';
+import { AlbumListPage } from "./album-list/album-list.page";
+import { AlbumDetailsPage } from "./album-details/album-details.page";
 
 @NgModule({
   imports: [
@@ -14,11 +14,11 @@ import { AlbumDetailsPage } from './album-details/album-details.page';
     IonicModule,
     RouterModule.forChild([
       {
-        path: '',
+        path: "",
         component: AlbumListPage
       },
       {
-        path: ':id',
+        path: ":id",
         component: AlbumDetailsPage
       }
     ])
