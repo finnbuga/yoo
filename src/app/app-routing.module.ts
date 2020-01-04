@@ -6,7 +6,7 @@ import { ApiModule } from "./api/api.module";
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "home",
+    redirectTo: "signin",
     pathMatch: "full"
   },
   {
@@ -16,6 +16,11 @@ const routes: Routes = [
   {
     path: "albums",
     loadChildren: () => import("./album/album.module").then(m => m.AlbumModule)
+  },
+  {
+    path: "signin",
+    loadChildren: () =>
+      import("./signin/signin.module").then(m => m.SigninModule)
   }
 ];
 

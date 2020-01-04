@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sign In</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form id="signin-form" #form="ngForm" (ngSubmit)="handleSubmit(form)">
+    <ion-grid>
+      <ion-row color="primary" class="ion-justify-content-center">
+        <ion-col class="ion-align-self-center" size-md="5" size-xs="8">
+          <ion-item>
+            <ion-label position="floating">
+              <ion-icon name="mail"></ion-icon>Email
+            </ion-label>
+            <ion-input
+              [(ngModel)]="credentials.email"
+              type="email"
+              name="email"
+              required
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">
+              <ion-icon name="lock"></ion-icon>Password
+            </ion-label>
+            <ion-input
+              [(ngModel)]="credentials.password"
+              type="password"
+              name="password"
+              required
+            ></ion-input>
+          </ion-item>
+          <ion-button
+            shape="round"
+            color="dark"
+            type="submit"
+            fill="outline"
+            disabled
+          >
+            Sign Up
+          </ion-button>
+          <ion-button shape="round" color="dark" type="submit">
+            Sign In
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
