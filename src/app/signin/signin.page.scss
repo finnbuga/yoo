@@ -1,0 +1,18 @@
+ion-content {
+  --background: var(--ion-color-light);
+}
+
+#signin-form {
+  margin-top: 3rem;
+}
+
+#signin-form ion-icon {
+  font-size: 1.2em;
+  position: relative;
+  top: 3px;
+  margin-right: 0.3rem;
+}
+
+#signin-form ion-button {
+  margin-top: 3rem;
+}

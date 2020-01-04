@@ -40,6 +40,12 @@ export class AppComponent {
       url: "/chat",
       icon: "chatbubbles",
       isDisabled: true
+    },
+    {
+      title: "Sing In",
+      url: "/signin",
+      icon: "log-in",
+      isDisabled: false
     }
   ];
 
