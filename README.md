@@ -6,11 +6,11 @@ $ ipm install
 $ ionic serve
 ```
 This will launch the app in the browser.
-For testing it on a mobile device use
+For testing it on a mobile device use:
 ```
 $ ionic serve --devapp
 ```
-For more details on the Ionic DevApp this see this short [Ionic Document](https://ionicframework.com/docs/angular/your-first-app/ios-android-camera#install-devapp)
+For more details on the Ionic DevApp this see this short [Ionic Document](https://ionicframework.com/docs/angular/your-first-app/ios-android-camera#install-devapp).
 
 ## To Do
 - build a nicer UI (e.g. implement the proposed design, enhance UI with elements like ion-infinite-scroll, ion-loading, ion-refresher)
@@ -21,5 +21,4 @@ For more details on the Ionic DevApp this see this short [Ionic Document](https:
 - refactor code: add interfaces, constants (e.g. for paths like /albums)
 - reduce duplicated code (e.g. build a shared header component)
 - map API objects to model
-- add tracking for analytics
 - have a glass of champagne 🥂
