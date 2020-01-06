@@ -46,6 +46,12 @@ export class AppComponent {
       url: "/signin",
       icon: "log-in",
       isDisabled: false
+    },
+    {
+      title: "Date/Time picker",
+      url: "/datetime",
+      icon: "calendar",
+      isDisabled: false
     }
   ];
 
